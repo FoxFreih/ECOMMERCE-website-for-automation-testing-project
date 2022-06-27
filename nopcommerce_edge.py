@@ -6,10 +6,8 @@ from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome import webdriver
 from selenium import webdriver
-from selenium.webdriver.firefox.service import Service as FirefoxService
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.webdriver.support.ui import Select
 
 
@@ -17,10 +15,9 @@ class TestLogInPage:
     @pytest.fixture(autouse=True)
     def setup_method(self):
 
-        Firefox_driver_binary = "./drivers/geckodriver.exe"
-        fire_fox_options = FirefoxOptions()
-        ser_firefox = FirefoxService(Firefox_driver_binary)
-        self.driver = webdriver.Firefox(service=ser_firefox, options=fire_fox_options)
+        edge_driver_binary = "./drivers/msedgedriver.exe"
+        ser_edge = EdgeService(edge_driver_binary)
+        self.driver = webdriver.Edge(service=ser_edge)
         yield self.driver
         self.driver.close()
 
