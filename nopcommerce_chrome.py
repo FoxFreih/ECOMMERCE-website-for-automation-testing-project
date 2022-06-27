@@ -24,72 +24,72 @@ class TestLogInPage:
         yield self.driver
         self.driver.close()
 
-    # def test_register_signUp(self):
-    #     self.driver.get('https://demo.nopcommerce.com/')
-    #     self.driver.maximize_window()
-    #     time.sleep(1)
-    #     self.driver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a').click()
-    #     time.sleep(1)
-    #     self.driver.find_element(By.ID, "gender-female").click()
-    #     time.sleep(1)
-    #     self.driver.find_element(By.NAME,"FirstName").send_keys("Amal")
-    #     time.sleep(1)
-    #     self.driver.find_element(By.NAME, "LastName").send_keys("Saleh")
-    #     time.sleep(1)
-    #     Day = Select(self.driver.find_element(By.NAME, "DateOfBirthDay")).select_by_value('28')
-    #     time.sleep(1)
-    #     Month = Select(self.driver.find_element(By.NAME, "DateOfBirthMonth")).select_by_value('5')
-    #     time.sleep(1)
-    #     Year = Select(self.driver.find_element(By.NAME, "DateOfBirthYear")).select_by_value('1996')
-    #     time.sleep(1)
-    #     self.driver.find_element(By.NAME, "Email").send_keys("amalfreih96@gmail.com")
-    #     time.sleep(1)
-    #     self.driver.find_element(By.NAME, "Company").send_keys("apple")
-    #     time.sleep(1)
-    #     self.driver.find_element(By.NAME, "Password").send_keys("Amal1996*")
-    #     time.sleep(1)
-    #     self.driver.find_element(By.NAME, "ConfirmPassword").send_keys("Amal1996*")
-    #     time.sleep(1)
-    #
-    #     register_button = self.driver.find_element(By.NAME, 'register-button').click()
-    #
-    #     time.sleep(5)
-    #
-    # def test_positive_login(self):
-    #     self.driver.get('https://demo.nopcommerce.com/')
-    #     time.sleep(1)
-    #     self.driver.maximize_window()
-    #     self.driver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a').click()
-    #     time.sleep(1)
-    #     email = "amalfreih96@gmail.com"
-    #     self.driver.find_element(By.NAME,"Email").send_keys(email)
-    #     time.sleep(1)
-    #     self.driver.find_element(By.NAME, "Password").send_keys("Amal1996*")
-    #     time.sleep(1)
-    #     self.driver.find_element(By.XPATH, '/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[3]/button').click()
-    #     time.sleep(1)
-    #     self.driver.find_element(By.XPATH, "/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a").click()
-    #     time.sleep(1)
-    #     text = self.driver.find_element(By.NAME, "Email").get_attribute("value")
-    #     # time.sleep(2)
-    #     assert text == email
+    def test_register_signUp(self):
+        self.driver.get('https://demo.nopcommerce.com/')
+        self.driver.maximize_window()
+        time.sleep(1)
+        self.driver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a').click()
+        time.sleep(1)
+        self.driver.find_element(By.ID, "gender-female").click()
+        time.sleep(1)
+        self.driver.find_element(By.NAME,"FirstName").send_keys("Amal")
+        time.sleep(1)
+        self.driver.find_element(By.NAME, "LastName").send_keys("Saleh")
+        time.sleep(1)
+        Day = Select(self.driver.find_element(By.NAME, "DateOfBirthDay")).select_by_value('28')
+        time.sleep(1)
+        Month = Select(self.driver.find_element(By.NAME, "DateOfBirthMonth")).select_by_value('5')
+        time.sleep(1)
+        Year = Select(self.driver.find_element(By.NAME, "DateOfBirthYear")).select_by_value('1996')
+        time.sleep(1)
+        self.driver.find_element(By.NAME, "Email").send_keys("amalfreih96@gmail.com")
+        time.sleep(1)
+        self.driver.find_element(By.NAME, "Company").send_keys("apple")
+        time.sleep(1)
+        self.driver.find_element(By.NAME, "Password").send_keys("Amal1996*")
+        time.sleep(1)
+        self.driver.find_element(By.NAME, "ConfirmPassword").send_keys("Amal1996*")
+        time.sleep(1)
 
-    # def test_negative_login(self):
-    #     self.driver.get('https://demo.nopcommerce.com/')
-    #     time.sleep(1)
-    #     self.driver.maximize_window()
-    #     self.driver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a').click()
-    #     time.sleep(1)
-    #     self.driver.find_element(By.NAME,"Email").send_keys("abcd@gmail.com")
-    #     time.sleep(1)
-    #     self.driver.find_element(By.NAME, "Password").send_keys("Amal1996*")
-    #     time.sleep(1)
-    #     self.driver.find_element(By.XPATH, '/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[3]/button').click()
-    #     time.sleep(1)
-    #
-    #     error_message1 = self.driver.find_element(By.XPATH, "/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[1]").text
-    #     error_message2 = self.driver.find_element(By.XPATH,"/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[1]/ul/li").text
-    #     assert error_message1  or error_message2 in "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found"
+        register_button = self.driver.find_element(By.NAME, 'register-button').click()
+
+        time.sleep(5)
+
+    def test_positive_login(self):
+        self.driver.get('https://demo.nopcommerce.com/')
+        time.sleep(1)
+        self.driver.maximize_window()
+        self.driver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a').click()
+        time.sleep(1)
+        email = "amalfreih96@gmail.com"
+        self.driver.find_element(By.NAME,"Email").send_keys(email)
+        time.sleep(1)
+        self.driver.find_element(By.NAME, "Password").send_keys("Amal1996*")
+        time.sleep(1)
+        self.driver.find_element(By.XPATH, '/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[3]/button').click()
+        time.sleep(1)
+        self.driver.find_element(By.XPATH, "/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a").click()
+        time.sleep(1)
+        text = self.driver.find_element(By.NAME, "Email").get_attribute("value")
+        # time.sleep(2)
+        assert text == email
+
+    def test_negative_login(self):
+        self.driver.get('https://demo.nopcommerce.com/')
+        time.sleep(1)
+        self.driver.maximize_window()
+        self.driver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a').click()
+        time.sleep(1)
+        self.driver.find_element(By.NAME,"Email").send_keys("abcd@gmail.com")
+        time.sleep(1)
+        self.driver.find_element(By.NAME, "Password").send_keys("Amal1996*")
+        time.sleep(1)
+        self.driver.find_element(By.XPATH, '/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[3]/button').click()
+        time.sleep(1)
+
+        error_message1 = self.driver.find_element(By.XPATH, "/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[1]").text
+        error_message2 = self.driver.find_element(By.XPATH,"/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[1]/ul/li").text
+        assert error_message1  or error_message2 in "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found"
 
     def test_error_messages_for_mandatory_fields(self):
         self.driver.get('https://demo.nopcommerce.com/')
